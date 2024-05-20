@@ -13,7 +13,7 @@ Ensure you have the necessary kernel headers installed. On Debian-based systems,
 
 ```sh
 sudo apt-get install linux-headers-$(uname -r)
-
+```
 ## Context, linux/init.h
 
 In the Linux kernel, the init.h header file provides macros for specifying the initialization and cleanup functions for kernel modules.
