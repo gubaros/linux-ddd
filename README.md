@@ -1,26 +1,29 @@
 # Linux Device Dummy Driver
 
-This is a simple Linux kernel driver that logs messages when loaded and unloaded.
+Este proyecto contiene varios ejemplos de controladores de dispositivo para el kernel de Linux. Cada uno de los ejemplos muestra diferentes técnicas para interactuar con el kernel. A continuación se describen los programas en C incluidos en este repositorio:
 
-## Files
+## Archivos
 
-- `dummy_driver.c`: The source code for the dummy driver.
-- `Makefile`: The makefile for building the module.
+- `driver.c`: El código fuente para el controlador básico del dispositivo.
+- `device.c`: El código fuente para el controlador de dispositivo de caracteres.
+- `kernel_timer.c`: El código fuente para el controlador del dispositivo utilizando un temporizador.
+- `Makefile`: El archivo de make para construir los módulos del kernel.
+- `test.sh`: Un script de prueba simple para cargar y descargar el módulo.
 
-## Prerequisites
+## Requisitos
 
-Ensure you have the necessary kernel headers installed. On Debian-based systems, you can install them with:
+Asegúrate de tener instalados los headers del kernel necesarios. En sistemas basados en Debian, puedes instalarlos con:
 
 ```sh
 sudo apt-get install linux-headers-$(uname -r)
-```
 
-## Context, linux/init.h
-
-In the Linux kernel, the init.h header file provides macros for specifying the initialization and cleanup functions for kernel modules.
-__init Macro
-
-The __init macro is used to mark a function as an initialization function. When the kernel is built with certain options, the memory used by these functions can be freed after the initialization is complete, which helps save memory.
-module_init Macro
-
-The module_init macro is used to declare the function that will be called when the module is loaded. It takes the name of the initialization function as an argument.
+```sh
+git clone https://github.com/gubaros/linux-ddd
+cd linux-ddd
+aclocal
+autoconf
+automake --add-missing
+./configure
+make
+sudo make install
+./test.sh
