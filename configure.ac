@@ -4,6 +4,7 @@ AC_PROG_CC
 AC_HEADER_MAJOR
 AC_CHECK_HEADERS([linux/module.h linux/init.h linux/kernel.h linux/fs.h])
 
+AM_CONDITIONAL([LINUX], [test "$(uname -s)" = "Linux"])
+
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
-
