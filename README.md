@@ -27,6 +27,7 @@ automake --add-missing
 make
 sudo make install
 ./test.sh
+```
 
 ## Ejemplos de controladores
 
