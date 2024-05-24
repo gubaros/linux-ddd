@@ -12,11 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: sudo apt-get install autoconf automake
-    - run: aclocal && autoconf && automake --add-missing
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
     - name: make
       run: make
     - name: make check
