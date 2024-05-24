@@ -1,0 +1,20 @@
+name: Build Dummy Driver
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up build environment
+      run: sudo apt-get update && sudo apt-get install -y autoconf automake build-essential linux-headers-$(uname -r)
+    - name: Generate configure script
+      run: |
+        aclocal
+        autoconf
+        automake --add-missing
+        ./configure
+    - name: Build module
+      run: make
+
