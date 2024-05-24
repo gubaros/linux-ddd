@@ -1,5 +1,7 @@
 # Linux Device Dummy Driver
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/786652307adb4d48a9443e55d3adc6db)](https://app.codacy.com/gh/gubaros/linux-ddd?utm_source=github.com&utm_medium=referral&utm_content=gubaros/linux-ddd&utm_campaign=Badge_Grade)
+
 This is a simple Linux kernel driver that logs messages when loaded and unloaded.
 
 ## Files
