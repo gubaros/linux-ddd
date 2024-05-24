@@ -19,3 +19,11 @@ jobs:
         ./configure
     - name: Build module
       run: make
+    - name: Run tests
+      run: make check
+    - name: Run module install
+      run: make install
+    - name: Run module uninstall
+      run: make uninstall
+    - name: Uninstall
+      run: make uninstall
