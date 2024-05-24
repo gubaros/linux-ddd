@@ -16,8 +16,6 @@ Asegúrate de tener instalados los headers del kernel necesarios. En sistemas ba
 
 ```sh
 sudo apt-get install linux-headers-$(uname -r)
-
-```sh
 git clone https://github.com/gubaros/linux-ddd
 cd linux-ddd
 aclocal
