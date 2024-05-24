@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - name: update ubuntu
-    - run: sudo apt update
+      run: sudo apt update
     - name: install headers
-    - run: sudo apt install build-essential linux-headers-$(uname -r)
+      run: sudo apt install build-essential linux-headers-$(uname -r)
     - name: make
       run: make
     - name: make check
