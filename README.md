@@ -27,3 +27,9 @@ automake --add-missing
 make
 sudo make install
 ./test.sh
+
+## Ejemplos de controladores
+
+1. driver.c: Este es un controlador básico de Linux que simplemente registra mensajes cuando se carga y descarga.
+2. device.c: Este es un controlador de dispositivo de caracteres. Permite la creación de un dispositivo de caracteres que puede manejar operaciones básicas como open, read, write y release.
+3. kernel_timer.c: Este controlador de Linux utiliza un temporizador para ejecutar una función de callback después de un período de tiempo específico.
