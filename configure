@@ -1,0 +1,8 @@
+AC_INIT([dummy_driver], [1.0], [you@example.com])
+AM_INIT_AUTOMAKE([-Wall -Werror foreign])
+AC_PROG_CC
+AC_HEADER_MAJOR
+AC_CHECK_HEADERS([linux/module.h linux/init.h linux/kernel.h linux/fs.h])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
