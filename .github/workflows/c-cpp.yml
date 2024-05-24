@@ -16,6 +16,8 @@ jobs:
       run: sudo apt update
     - name: install headers
       run: sudo apt install build-essential linux-headers-$(uname -r)
+    - name: checkout repo
+      run: actions/checkout@main
     - name: make
       run: make
     - name: make check
